@@ -51,6 +51,9 @@ This study presents the results of whole-genome sequencing and chromosome-scale 
 
 ## Project Layout
 
+![image](https://github.com/user-attachments/assets/82a2886b-fae8-4187-85fd-5302729d6845)
+
+
 
 
 ---
