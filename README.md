@@ -249,9 +249,15 @@ GetTwoGenomeSyn.pl \
 
 
 ## 9. Contacts & References
+
 NCBI BioProjects:
+
 PRJNA1145343 : Anastrepha fraterculus isolate:IGEAF | breed:sp1 Genome sequencing (TaxID: 95504) 
+
+
 PRJNA1145375 : Anastrepha fraterculus isolate:IGEAF Genome sequencing (TaxID: 95504)
+
+
 
 
 -------------------------------------------------------------------
