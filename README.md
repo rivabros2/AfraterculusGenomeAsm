@@ -10,7 +10,7 @@ This study presents the results of whole-genome sequencing and chromosome-scale 
 
 # Anastrepha fraterculus Genome & Hi-C Assembly Pipeline
 
-> **Maintainer:** Your Name  
+> **Maintainer:** Maximo Rivarola
 > **Last updated:** 2025-04-30
 
 ## Table of Contents
