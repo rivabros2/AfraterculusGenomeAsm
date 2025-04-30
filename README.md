@@ -51,3 +51,48 @@ This study presents the results of whole-genome sequencing and chromosome-scale 
 
 ## Project Layout
 
+
+
+---
+
+## 1. Quality Control
+
+1. **FastQC**  
+   ```bash
+   fastqc -t 16 -o results/qc/ data/raw_reads/*.fastq.gz
+
+zcat data/raw_reads/female_reads.fastq.gz | wc -l
+zcat data/raw_reads/male_reads.fastq.gz   | wc -l
+
+# Female
+zcat female_reads.fastq.gz \
+  | jellyfish count -C -m 21 -s 1e11 -t 20 -o results/qc/Female.jf
+jellyfish histo -t 30 results/qc/Female.jf > results/qc/Female.histo
+
+# Male
+zcat male_reads.fastq.gz \
+  | jellyfish count -C -m 21 -s 1e11 -t 20 -o results/qc/Male.jf
+jellyfish histo -t 30 results/qc/Male.jf > results/qc/Male.histo
+
+# GenomeScope K-mer analysis
+genomescope2 -i results/qc/Female.histo -o results/qc/genomescope_female
+genomescope2 -i results/qc/Male.histo   -o results/qc/genomescope_male
+
+
+2. Genome Assembly
+# Female assembly
+canu \
+  -p afr_female -d results/assembly/female \
+  genomeSize=615m \
+  -useGrid=false -maxMemory=800g -maxThreads=90 \
+  -nanopore-raw data/raw_reads/female_reads.fastq.gz
+
+# Male assembly
+canu \
+  -p afr_male -d results/assembly/male \
+  genomeSize=615m \
+  -useGrid=false -maxMemory=800g -maxThreads=90 \
+  -nanopore-raw data/raw_reads/male_reads.fastq.gz
+
+
+
