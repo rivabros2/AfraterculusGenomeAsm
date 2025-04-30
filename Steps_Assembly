@@ -1,8 +1,10 @@
 ## Pipeline and steps:
 
-Methods
-Project Setup
+#Methods
+#Project Setup
 All analyses were conducted within a dedicated project directory. Raw sequencing data, including Oxford Nanopore, MGI reads, and HiC data for both male and female Anastrepha fraterculus samples, were organized accordingly.
+
+
 Quality Control
 Initial quality control was performed using FastQC to assess read quality. The total number of reads for female and male samples were determined using the wc command. K-mer analysis and genome size estimation were conducted using Jellyfish and GenomeScope. The k-mer counts were obtained with the following commands:
 ```bash
