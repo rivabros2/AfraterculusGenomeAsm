@@ -92,6 +92,8 @@ canu \
   -p afr_male -d results/assembly/male \
   genomeSize=615m \
   -useGrid=false -maxMemory=800g -maxThreads=90 \
+  -nanopore-raw data/raw_reads/male_reads.fastq.gz
+
 
 
 
@@ -248,35 +250,5 @@ GetTwoGenomeSyn.pl \
 
 
 -------------------------------------------------------------------
-
-
----
-
-
-
-
-
-    
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  -nanopore-raw data/raw_reads/male_reads.fastq.gz
-
 
 
