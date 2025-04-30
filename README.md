@@ -116,8 +116,72 @@ purge_dups/run_purge_dups.py \
 purge_dups/run_purge_dups.py \
   -p bash \
   results/assembly/male/afr_male_Polished.json \
-  /path/to/purge_dups/bin/ \
-  results/purge_dups/male
+  /path/to/purge_dups/bin/  results/purge_dups/male
+
+## 4. Hi-C Processing & Scaffolding
+# Map & parse
+bwa mem -5SP -T0 -t 20 \
+  results/purge_dups/male.fa.polished \
+  data/hic_reads/male_R1.fastq.gz \
+  data/hic_reads/male_R2.fastq.gz \
+  > results/hic/male.sam
+
+pairtools parse \
+  --min-mapq 40 --walks-policy 5unique --max-inter-align-gap 30 \
+  --nproc-in 10 --nproc-out 10 \
+  --chroms-path results/purge_dups/male.fa.polished.fai \
+  -o results/hic/parsed.txt \
+  --output-stats results/hic/parse_stats.txt \
+  results/hic/male.sam
+
+
+# Sort & dedup
+pairtools sort \
+  --memory 150G --tmpdir=/tmp --nproc 15 \
+  -o results/hic/sorted.pairsam \
+  results/hic/parsed.txt
+
+pairtools dedup \
+  --mark-dups \
+  --nproc-in 10 --nproc-out 10 \
+  -o results/hic/dedup.pairsam \
+  --output-stats results/hic/dedup_stats.txt \
+  results/hic/sorted.pairsam
+
+
+# Scaffold with YAHS
+yahs \
+  -o results/hic/yahs_scaffolds \
+  --no-mem-check \
+  -r 2000,8000,15000000 \
+  --read-length 150 \
+  results/purge_dups/male.fa.polished \
+  results/hic/dedup.pairsam.bed
+
+
+## Reference‐guided scaffolding (RagTag)
+# Female → Male
+ragtag.py scaffold -t 40 \
+  --aligner minimap2 \
+  -o results/scaffold/f2m \
+  results/purge_dups/female.fa.polished \
+  results/scaffold/yahs_scaffolds.fa
+
+# Male → Female (no breaks)
+ragtag.py scaffold -t 40 \
+  --aligner minimap2 \
+  -o results/scaffold/m2f \
+  --no-breaks \
+  results/scaffold/f2m/ragtag.scaffold.fasta \
+  results/purge_dups/male.fa.polished
+
+
+
+## 5. Assembly Assessment
+
+
+
+
 
 
 
