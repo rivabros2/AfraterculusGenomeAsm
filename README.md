@@ -211,6 +211,11 @@ get_organelle_from_reads.py \
 ## 8. Annotation & Synteny
 # 1 Annotation (GenSAS)
 
+
+![image](https://github.com/user-attachments/assets/81103076-9c39-4c04-b87b-45d967725efb)
+
+
+
     Upload results/scaffold/*/ragtag.scaffold.fasta
 
     Configure gene prediction, repeat masking, functional annotation
