@@ -219,6 +219,11 @@ get_organelle_from_reads.py \
     Upload results/scaffold/*/ragtag.scaffold.fasta
 
     Configure gene prediction, repeat masking, functional annotation
+
+# Tools used in GenSas v6:
+https://www.gensas.org/tools
+
+
 # 2 Comparative genomics (OrthoVenn3 / NGenomeSyn)
 
 GetTwoGenomeSyn.pl \
