@@ -210,6 +210,16 @@ get_organelle_from_reads.py \
 
 ## 8. Annotation & Synteny
 # 1 Annotation (GenSAS)
+The steps on the flowcharts with the same color represent the major steps of annotation:
+
+    Project creation/uploading sequences and evidence
+    Repeat identification and masking (for eukaryotes)
+    Structural annotation
+    Selection of official gene set (and refinement for eukaryotes)
+    Functional annotation
+    Manual curation of the annotation
+    Preparing files for publication
+
 
 
 ![image](https://github.com/user-attachments/assets/81103076-9c39-4c04-b87b-45d967725efb)
