@@ -25,7 +25,7 @@ This study presents the results of whole-genome sequencing and chromosome-scale 
 8. [6. K-mer Comparisons](#6-k-mer-comparisons)  
 9. [7. Mitochondrial Genome](#7-mitochondrial-genome)  
 10. [8. Annotation & Synteny](#8-annotation--synteny)  
-11. [Contacts & References](#contacts--references)
+11. [9. Contacts & References](#9-contacts--references)
 
 ---
 
@@ -247,6 +247,11 @@ GetTwoGenomeSyn.pl \
   -MinLenA 50000 -MinLenB 50000 \
   -NumThreads 25
 
+
+## 9. Contacts & References
+NCBI BioProjects:
+PRJNA1145343 : Anastrepha fraterculus isolate:IGEAF | breed:sp1 Genome sequencing (TaxID: 95504) 
+PRJNA1145375 : Anastrepha fraterculus isolate:IGEAF Genome sequencing (TaxID: 95504)
 
 
 -------------------------------------------------------------------
