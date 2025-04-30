@@ -179,6 +179,75 @@ ragtag.py scaffold -t 40 \
 
 ## 5. Assembly Assessment
 
+busco \
+  -m genome -c 30 \
+  -i results/scaffold/m2f/ragtag.scaffold.fasta \
+  -o busco_male \
+  -l diptera_odb10
+
+busco \
+  -m genome -c 30 \
+  -i results/scaffold/f2m/ragtag.scaffold.fasta \
+  -o busco_female \
+  -l diptera_odb10
+
+
+## 6. K-mer Comparisons
+kat plot spectra-mx \
+  -t "Male Reads vs Assembly" \
+  -i results/kat/maleReads_assembly.mx \
+  -o results/kat/male_spectra.png
+
+
+## 7. Mitochondrial Genome
+get_organelle_from_reads.py \
+  -1 data/raw_reads/male_R1.fastq.gz \
+  -2 data/raw_reads/male_R2.fastq.gz \
+  -F animal_mt \
+  -o results/mito/male_mt \
+  -R 10 -t 25
+
+
+## 8. Annotation & Synteny
+# 1 Annotation (GenSAS)
+
+    Upload results/scaffold/*/ragtag.scaffold.fasta
+
+    Configure gene prediction, repeat masking, functional annotation
+# 2 Comparative genomics (OrthoVenn3 / NGenomeSyn)
+
+GetTwoGenomeSyn.pl \
+  -InGenomeA results/annotation/female.fasta \
+  -InGenomeB annotation/AnaLude1.1_genomic.fna \
+  -OutPrefix results/synteny/female_vs_analu \
+  -MappingBin minimap2 \
+  -BinDir /path/to/minimap2/ \
+  -MinLenA 50000 -MinLenB 50000 \
+  -NumThreads 25
+
+
+
+-------------------------------------------------------------------
+
+
+---
+
+
+
+
+
+    
+
+
+    
+
+
+
+
+
+
+
+
 
 
 
