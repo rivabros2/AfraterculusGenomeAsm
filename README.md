@@ -92,6 +92,37 @@ canu \
   -p afr_male -d results/assembly/male \
   genomeSize=615m \
   -useGrid=false -maxMemory=800g -maxThreads=90 \
+
+
+
+## 3. Polishing & Purging
+# Polish with Jasper
+jasper.sh \
+  --jf results/qc/Female.jf \
+  -a results/assembly/female/afr_female.contigs.fasta \
+  -k 29 -t 40 -p 4
+jasper.sh \
+  --jf results/qc/Male.jf \
+  -a results/assembly/male/afr_male.contigs.fasta \
+  -k 29 -t 40 -p 4
+
+# Purge duplicates
+purge_dups/run_purge_dups.py \
+  -p bash \
+  results/assembly/female/afr_female_Polished.json \
+  /path/to/purge_dups/bin/ \
+  results/purge_dups/female
+
+purge_dups/run_purge_dups.py \
+  -p bash \
+  results/assembly/male/afr_male_Polished.json \
+  /path/to/purge_dups/bin/ \
+  results/purge_dups/male
+
+
+
+
+  
   -nanopore-raw data/raw_reads/male_reads.fastq.gz
 
 
