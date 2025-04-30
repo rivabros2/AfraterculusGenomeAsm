@@ -79,7 +79,7 @@ genomescope2 -i results/qc/Female.histo -o results/qc/genomescope_female
 genomescope2 -i results/qc/Male.histo   -o results/qc/genomescope_male
 
 
-2. Genome Assembly
+## 2. Genome Assembly
 # Female assembly
 canu \
   -p afr_female -d results/assembly/female \
