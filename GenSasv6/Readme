@@ -1,1 +1,11 @@
+## Welcome to GenSAS https://www.gensas.org/
+
+JL Humann, T Lee, S Ficklin, D Main. "Structural and Functional Annotation of Eukaryotic Genomes with GenSAS." Gene Prediction: Methods and Protocols.  Ed. Martin Kollmar. New York: Humana Press, 2019. 29-51. DOI: 10.1007/978-1-4939-9173-0_3
+
+
+The Genome Sequence Annotation Server (GenSAS) is an online platform that provides a pipeline for whole genome structural and functional annotation for eukaryotes and prokaryotes. 
+
+Users can upload genome sequences and select from a variety of tools for repeat masking, prediction of gene models and other structural features as well as functional annotation tools.  
+
+GenSAS integrates with JBrowse and Apollo to provide visualization and editing. For more details about GenSAS, please see our User's Guide.
 
