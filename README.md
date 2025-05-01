@@ -44,7 +44,10 @@ This study presents the results of whole-genome sequencing and chromosome-scale 
   - YAHS v1.0, RagTag v2.1.0 (minimap2 aligner)  
   - BUSCO v5.4.5 (`diptera_odb10`)  
   - KAT v2.4.2  
-  - GetOrganelle v1.7.0, GenSAS, OrthoVenn3, NGenomeSyn  
+  - GetOrganelle v1.7.0,
+  - GenSAS website,
+  - OrthoVenn3,
+  - NGenomeSyn  
 - **Hardware:**  
   - ≥ 90 CPUs, ≥ 800 GB RAM (Canu Asm)  
   - ≥ 150 GB tmp (Pairtools sort)  
