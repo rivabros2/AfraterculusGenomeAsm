@@ -44,7 +44,7 @@ This study presents the results of whole-genome sequencing and chromosome-scale 
   - KAT v2.4.2  
   - GetOrganelle v1.7.0, GenSAS, OrthoVenn3, NGenomeSyn  
 - **Hardware:**  
-  - ≥ 90 CPUs, ≥ 800 GB RAM (Canu)  
+  - ≥ 90 CPUs, ≥ 800 GB RAM (Canu Asm)  
   - ≥ 150 GB tmp (Pairtools sort)  
 
 ---
@@ -86,15 +86,13 @@ genomescope2 -i results/qc/Male.histo   -o results/qc/genomescope_male
 
 ## 2. Genome Assembly
 # Female assembly
-canu \
-  -p afr_female -d results/assembly/female \
+canu -p afr_female -d results/assembly/female \
   genomeSize=615m \
   -useGrid=false -maxMemory=800g -maxThreads=90 \
   -nanopore-raw data/raw_reads/female_reads.fastq.gz
 
 # Male assembly
-canu \
-  -p afr_male -d results/assembly/male \
+canu -p afr_male -d results/assembly/male \
   genomeSize=615m \
   -useGrid=false -maxMemory=800g -maxThreads=90 \
   -nanopore-raw data/raw_reads/male_reads.fastq.gz
@@ -239,6 +237,8 @@ The steps on the flowcharts with the same color represent the major steps of ann
 
 # Tools used in GenSas v6:
 https://www.gensas.org/tools
+
+see Info in GenSas 
 
 
 # 2 Comparative genomics (OrthoVenn3 / NGenomeSyn)
