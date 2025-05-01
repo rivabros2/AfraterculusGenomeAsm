@@ -1,0 +1,71 @@
+
+=================================
+ Project Summary
+---------------------------------
+# Project Information
+  Project Name         : AfratercFemale
+  Owner                : rivabros2
+  Create Date          : 2024-02-11 13:15:23
+
+# Project Properties
+  Genus                : Anastrepha
+  Species              : fraterculus
+  Project Type         : invertebrate
+  Prefix               : Af
+  Common Name          : anstrephafrat
+  NCBI Taxonomy ID     : 95504
+  Genetic Code         : Standard Code
+
+# Input FASTA
+  Filename           : ragtagScafFemaleCanuPurgPolish.fasta
+  Filesize           : 725.51 MB
+  Number of Sequence : 58
+
+=================================
+ Job Information
+---------------------------------
+# Official Gene Set
+  >PASA RefinBrakerv1
+  - version : 2.4.1
+  - Transcripts FASTA file : 86925TrinityAfratTSA.fa
+
+  # The source Job of the refinement job
+    >BRAKERv1Female
+    - version : 2.1.5
+    - BAM File : 
+
+
+# The consensus mask Job
+  >Masked Repeat Consensus
+
+  # The source jobs for consensus mask job
+    >RepeatMaskerFemaledfam
+# The functional Jobs on the OGS
+  >BLASTpRefin
+  - version : 2.12.0
+  - Protein Data Set : NCBI refseq invertebrate (Protein)
+  - Matrix : BLOSUM62
+  - Word Size : 3
+  - Gap Open : 11
+  - Gap Extend : 1
+  - Maximum HSP Distinace : 30000
+  - Expect : 1e-10
+  - Output type : tab
+
+  >DImndRefin
+  - version : 2.0.11
+  - Protein Data Set : NCBI refseq invertebrate (Protein)
+  - Sensitivity Modes : --mid-sensitive
+
+  >InterProScanRefin
+  - version : 5.53-87.0
+
+  >PfamRefin
+  - version : 1.6
+  - E-value Sequence : 1
+  - E-value Domain : 10
+
+  >SignalP
+  - version : 5.0b
+  - Organism : euk
+

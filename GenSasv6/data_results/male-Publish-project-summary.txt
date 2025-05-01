@@ -1,0 +1,71 @@
+
+=================================
+ Project Summary
+---------------------------------
+# Project Information
+  Project Name         : Anastrepha fraterculus Male Asm
+  Owner                : rivabros2
+  Create Date          : 2024-01-30 10:36:30
+
+# Project Properties
+  Genus                : Anastrepha
+  Species              : anastrepha fraterculus
+  Project Type         : invertebrate
+  Prefix               : Aa
+  strain               : sp1
+  NCBI Taxonomy ID     : 95504
+  Genetic Code         : Standard Code
+
+# Input FASTA
+  Filename           : ragtag.scafMaleCanuPurgPolishYahs.fasta
+  Filesize           : 714.48 MB
+  Number of Sequence : 68
+
+=================================
+ Job Information
+---------------------------------
+# Official Gene Set
+  >PASARefin_Brakerv1
+  - version : 2.4.1
+  - Transcripts FASTA file : 86925TrinityAfratTSA.fa
+
+  # The source Job of the refinement job
+    >BRAKERv1
+    - version : 2.1.5
+    - BAM File : 
+
+
+# The consensus mask Job
+  >Masked Repeat Consensus
+
+  # The source jobs for consensus mask job
+    >RepeatMaskerDfam
+# The functional Jobs on the OGS
+  >BLASTpRefinBrakerv1
+  - version : 2.12.0
+  - Protein Data Set : NCBI refseq invertebrate (Protein)
+  - Matrix : BLOSUM62
+  - Word Size : 3
+  - Gap Open : 11
+  - Gap Extend : 1
+  - Maximum HSP Distinace : 30000
+  - Expect : 1e-10
+  - Output type : tab
+
+  >DIamnRefinBrakerv1
+  - version : 2.0.11
+  - Protein Data Set : NCBI refseq invertebrate (Protein)
+  - Sensitivity Modes : --fast
+
+  >InterproRefinBrakerv1
+  - version : 5.53-87.0
+
+  >PfamRefinBrakerv1
+  - version : 1.6
+  - E-value Sequence : 1
+  - E-value Domain : 10
+
+  >SignalPRefinBtakerv1
+  - version : 5.0b
+  - Organism : euk
+
