@@ -219,7 +219,7 @@ get_organelle_from_reads.py \
 
 
 ## 8. Annotation & Synteny
-# 1 Annotation (GenSAS)
+# Annotation (GenSAS)
 The steps on the flowcharts with the same color represent the major steps of annotation:
 
     Project creation/uploading sequences and evidence
@@ -246,7 +246,7 @@ https://www.gensas.org/tools
 see Info in GenSas 
 
 
-# 2 Comparative genomics (OrthoVenn3 / NGenomeSyn)
+# Comparative genomics (OrthoVenn3 / NGenomeSyn)
 
 GetTwoGenomeSyn.pl \
   -InGenomeA results/annotation/female.fasta \
