@@ -220,6 +220,10 @@ get_organelle_from_reads.py \
 
 ## 8. Annotation & Synteny
 # Annotation (GenSAS)
+## RNAseq data used in gene prediction:
+The RNA-seq data used to support gene model prediction corresponds to BioProject ID: PRJNA606292 (SRA accessions SRR11095951–SRR11095953) as originally described in Scannapieco et al. (2020). These transcriptomic data were incorporated into the GenSAS annotation pipeline via read alignment and transcriptome assembly steps, providing transcriptional evidence for gene prediction. 
+
+
 The steps on the flowcharts with the same color represent the major steps of annotation:
 
     Project creation/uploading sequences and evidence
