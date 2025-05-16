@@ -159,7 +159,7 @@ pairtools dedup \
   results/hic/sorted.pairsam
 
 
-# Scaffold with YAHS
+# Scaffold with YAHS (Male only)
 yahs \
   -o results/hic/yahs_scaffolds \
   --no-mem-check \
